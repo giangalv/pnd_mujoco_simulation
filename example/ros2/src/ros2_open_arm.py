@@ -5,7 +5,7 @@ import time
 import threading
 from rclpy.node import Node
 # from pndbotics_sdk_py.core.channel import ChannelPublisher, ChannelFactoryInitialize
-from adam_u.msg import LowCmd, LowState, MotorCmd, MotorState
+from pnd_adam.msg import LowCmd, LowState, MotorCmd, MotorState
 
 # Kp 配置数组（对应19个关节）
 KP_CONFIG = [
@@ -58,8 +58,8 @@ class DemonController(Node):
         super().__init__('demon_controller')
         self.lowcmd_pub_ = self.create_publisher(LowCmd, 'lowcmd', 1)
         
-        timer_period = 0.01 
-        self.timer = self.create_timer(timer_period, self.Control)
+        self.dt = 0.0025 
+        self.timer = self.create_timer(self.dt, self.Control)
         self.mutex = threading.Lock()
         
         self.motor_state = None
@@ -85,7 +85,6 @@ class DemonController(Node):
                            0, 0, 0, 0,
                               0, 0, 0]
         self.target_positions = [0.0] * self.joint_num
-        self.dt = 0.002
         self.runing_time = 0.0
 
     def Control(self):
