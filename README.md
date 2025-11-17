@@ -10,7 +10,7 @@
 - `pnd_robots`: pnd sdk 支持的机器人 mjcf 描述文件
 - `example`: 例程
 
-## 支持的 PND sdk2 消息：
+## 支持的 PND sdk 消息：
 
 **当前版本仅支持底层开发，主要用于控制器的 sim to real 验证**
 
@@ -24,8 +24,8 @@
 ## 相关链接
 
 - [pnd_sdk_python](https://github.com/pndbotics/pnd_sdk_python)
-  <!-- - [pnd_ros2](https://github.com/pndrobotics/pnd_ros2) -->
-  <!-- - [PND 文档](https://support.pnd.com/home/zh/developer) -->
+  - [pnd_ros2](https://github.com/pndbotics/pnd_ros2)
+  - [PND wiki](https://wiki.pndbotics.com/half_robot/pnd_adam_u_sdk/)
 - [mujoco doc](https://mujoco.readthedocs.io/en/stable/overview.html)
 
 # 安装
