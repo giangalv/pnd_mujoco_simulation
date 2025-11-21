@@ -133,7 +133,7 @@ VIEWER_DT = 0.02
 
 `example` 文件夹下提供了使用不同接口实现, 这些例子简演示了如何使用 PND 提供的接口实现仿真到实物的实现。下面是每个文件夹名称的解释：
 
-- `cpp`: 基于 `C++`, 使用 `pnd_sdk2` 接口
+- `cpp`: 基于 `C++`, 使用 `pnd_sdk` 接口
 - `python`: 基于 `python`，使用 `pnd_sdk_python` 接口
 - `ros2`: 基于`ros2`，使用 `pnd_ros2` 接口
 
@@ -154,7 +154,7 @@ if len(sys.argv) <2:
     ChannelFactoryInitialize(1, "lo")
 else:
     // 否则使用指定的网卡
-    ChannelFactoryInitialize(0, sys.argv[1])
+    ChannelFactoryInitialize(1, sys.argv[1])
 ```
 
 ### pnd_ros2
@@ -171,8 +171,8 @@ colcon build
 2. 运行仿真
 
 ```bash
-source ~/pnd_ros2/setup_local.sh # 使用本地网卡
-export ROS_DOMAIN_ID=1 # 修改domain id 与仿真一致
+source ~/pnd_ros2/setup.sh # 使用本地网卡
+export ROS_DOMAIN_ID=2 # 修改domain id 与仿真一致
 ./install/open_arm/bin/open_arm # 运行
 ```
 
