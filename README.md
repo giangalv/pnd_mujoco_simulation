@@ -164,7 +164,7 @@ VIEWER_DT = 0.02
 To simulate the suspension & release process of humanoid robots:
 - Enable in config:
 ```python
-ENABLE_ELASTIC_BAND = True
+ENABLE_ELASTIC_BAND = 1
 ```
 - Controls:
     - `9` — engage/release hoist  
