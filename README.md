@@ -1,4 +1,4 @@
-# PND Mujoco
+# Overview
 
 ![PND_API](./PND_API.png)
 
@@ -49,7 +49,7 @@
 
 #### 🚀 New Features
 - Python-based MuJoCo simulator using pnd_sdk_python
-- C++ simulator using pnd_sdk
+- C++ simulator using pnd_sdk (coming soon)
 - Virtual elastic-band hoist for humanoid stability debugging
 - ROS2 Humble compatibility
 
@@ -71,7 +71,7 @@
 - **Cyclonedds**
 - **ROS2 Humble (optional)**
 
-### C++ Simulator Installation
+### C++ Simulator Installation (coming soon)
 
 #### Dependencies
 ```bash
@@ -250,7 +250,7 @@ Feel free to open issues or pull requests.
 
 [BSD-3 Clause © PNDbotics](./LICENSE)
 
-## 📚️ Reference
+## 📖 Reference
 
 - [pnd_sdk_python](https://github.com/pndbotics/pnd_sdk_python)
   - [pnd_ros2](https://github.com/pndbotics/pnd_ros2)
@@ -265,7 +265,7 @@ Feel free to open issues or pull requests.
 
 ## 📞 Contact
 
-- **PNDbotics**  
+- Email: info@pndbotics.com
 - Wiki: https://wiki.pndbotics.com  
 - SDK: https://github.com/pndbotics/pnd_sdk_python  
 - Issues: https://github.com/pndbotics/pnd_mujoco/issues
