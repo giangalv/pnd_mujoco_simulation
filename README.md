@@ -38,7 +38,7 @@
 - [Troubleshooting](#-troubleshooting)
 - [Contributing](#-contributing)
 - [License](#-license)
-- [Reference](#-referecnce)
+- [Reference](#-reference)
 - [Acknowledgement](#-acknowledgement)
 - [Contact](#-contact)
 - [Version Log](#-version-log)
@@ -201,25 +201,17 @@ else:
 
 ### ROS2 Example
 
-#### 1. Build
+#### 1. Source pnd_ros2
 ```bash
-source ~/pnd_ros2/setup.sh
-cd example/ros2
-colcon build
+cd pnd_ros2
+source setup.sh
 ```
 
-#### 2. Run in simulation
-```bash
-source ~/pnd_ros2/setup_local.sh
-export ROS_DOMAIN_ID=2
-./install/open_arm/bin/open_arm
-```
-
-#### 3. Run on real robot
+#### 2. Run in simulation or real robot
 ```bash
 source ~/pnd_ros2/setup.sh
 export ROS_DOMAIN_ID=2
-./install/open_arm/bin/open_arm
+python3 example/ros2/src/open_arm_ros2.py
 ```
 
 ### Supported PND SDK Messages
