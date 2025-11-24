@@ -18,5 +18,5 @@ JOYSTICK_DEVICE = 0 # Joystick number
 PRINT_SCENE_INFORMATION = False # Print link, joint and sensors information of robot
 ENABLE_ELASTIC_BAND = False # Virtual spring band, used for lifting adam
 
-SIMULATE_DT = 0.002  # Need to be larger than the runtime of viewer.sync()
+SIMULATE_DT = 0.0025  # Need to be larger than the runtime of viewer.sync()
 VIEWER_DT = 0.01  # 100 fps for viewer
