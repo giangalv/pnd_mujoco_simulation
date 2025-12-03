@@ -85,14 +85,14 @@ input("Press enter to start")
 if __name__ == '__main__':
 
     if len(sys.argv) <2:
-        ChannelFactoryInitialize(1, "lo")
+        ChannelFactoryInitialize(1)
     else:
         ChannelFactoryInitialize(1, sys.argv[1])
 
     # Create a publisher to publish the data defined in UserData class
     pub = ChannelPublisher("rt/lowcmd", LowCmd_)
     pub.Init()
-    cmd = adam_u_msg_dds__LowCmd_()
+    cmd = adam_u_msg_dds__LowCmd_(19)
 
     hand_pub = ChannelPublisher("rt/handcmd", HandCmd_)
     hand_pub.Init()
