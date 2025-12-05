@@ -56,8 +56,8 @@ def SimulationThread():
 
     # print(pnd.low_cmd_suber)
 
-    # if config.USE_JOYSTICK:
-    #     pnd.SetupJoystick(device_id=0, js_type=config.JOYSTICK_TYPE)
+    if config.USE_JOYSTICK:
+        pnd.SetupJoystick(device_id=0, js_type=config.JOYSTICK_TYPE)
     if config.PRINT_SCENE_INFORMATION:
         pnd.PrintSceneInformation()
 

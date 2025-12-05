@@ -136,58 +136,29 @@ class pndSdkBridge:
                 ]
 
             if self.joystick != None:
-                print("Using joystick to simulate wireless controller...")
                 pygame.event.get()
                 # Buttons
-                self.low_state.wireless_remote[2] = int(
-                    "".join(
-                        [
-                            f"{key}"
-                            for key in [
-                                0,
-                                0,
-                                int(self.joystick.get_axis(self.axis_id["LT"]) > 0),
-                                int(self.joystick.get_axis(self.axis_id["RT"]) > 0),
-                                int(self.joystick.get_button(self.button_id["SELECT"])),
-                                int(self.joystick.get_button(self.button_id["START"])),
-                                int(self.joystick.get_button(self.button_id["LB"])),
-                                int(self.joystick.get_button(self.button_id["RB"])),
-                            ]
-                        ]
-                    ),
-                    2,
-                )
-                self.low_state.wireless_remote[3] = int(
-                    "".join(
-                        [
-                            f"{key}"
-                            for key in [
-                                int(self.joystick.get_hat(0)[0] < 0),  # left
-                                int(self.joystick.get_hat(0)[1] < 0),  # down
-                                int(self.joystick.get_hat(0)[0] > 0), # right
-                                int(self.joystick.get_hat(0)[1] > 0),    # up
-                                int(self.joystick.get_button(self.button_id["Y"])),     # Y
-                                int(self.joystick.get_button(self.button_id["X"])),     # X
-                                int(self.joystick.get_button(self.button_id["B"])),     # B
-                                int(self.joystick.get_button(self.button_id["A"])),     # A
-                            ]
-                        ]
-                    ),
-                    2,
-                )
-                # Axes
-                sticks = [
-                    self.joystick.get_axis(self.axis_id["LX"]),
-                    self.joystick.get_axis(self.axis_id["RX"]),
-                    -self.joystick.get_axis(self.axis_id["RY"]),
-                    -self.joystick.get_axis(self.axis_id["LY"]),
-                ]
-                packs = list(map(lambda x: struct.pack("f", x), sticks))
-                self.low_state.wireless_remote[4:8] = packs[0]
-                self.low_state.wireless_remote[8:12] = packs[1]
-                self.low_state.wireless_remote[12:16] = packs[2]
-                self.low_state.wireless_remote[20:24] = packs[3]
+                self.low_state.wireless_remote[0] = self.joystick.get_axis(self.axis_id["LX"])
+                self.low_state.wireless_remote[1] = self.joystick.get_axis(self.axis_id["LY"])
+                self.low_state.wireless_remote[2] = self.joystick.get_axis(self.axis_id["RX"])
+                self.low_state.wireless_remote[3] = self.joystick.get_axis(self.axis_id["RY"])
+                self.low_state.wireless_remote[4] = self.joystick.get_axis(self.axis_id["LT"])
+                self.low_state.wireless_remote[5] = self.joystick.get_axis(self.axis_id["RT"])
 
+                self.low_state.wireless_remote[6] = self.joystick.get_hat(0)[0]
+                self.low_state.wireless_remote[7] = self.joystick.get_hat(0)[1]
+                
+                self.low_state.wireless_remote[8] = self.joystick.get_button(self.button_id["A"])
+                self.low_state.wireless_remote[9] = self.joystick.get_button(self.button_id["B"])
+                self.low_state.wireless_remote[10] = self.joystick.get_button(self.button_id["X"])
+                self.low_state.wireless_remote[11] = self.joystick.get_button(self.button_id["Y"])
+                self.low_state.wireless_remote[12] = self.joystick.get_button(self.button_id["LB"])
+                self.low_state.wireless_remote[13] = self.joystick.get_button(self.button_id["RB"])
+                self.low_state.wireless_remote[14] = self.joystick.get_button(self.button_id["SELECT"])
+                self.low_state.wireless_remote[15] = self.joystick.get_button(self.button_id["START"])
+                self.low_state.wireless_remote[16] = self.joystick.get_button(self.button_id["HOME"])
+                self.low_state.wireless_remote[17] = self.joystick.get_button(self.button_id["LO"])
+                self.low_state.wireless_remote[18] = self.joystick.get_button(self.button_id["RO"])
             self.low_state_puber.Write(self.low_state)
 
     def HandCmdHandler(self, msg: HandCmd_):
@@ -243,19 +214,22 @@ class pndSdkBridge:
                 "RY": 4,  # Right stick axis y
                 "LT": 2,  # Left trigger
                 "RT": 5,  # Right trigger
-                "DX": 6,  # Directional pad x
-                "DY": 7,  # Directional pad y
+                "XX": 6,  # Directional pad x
+                "YY": 7,  # Directional pad y
             }
 
             self.button_id = {
+                "A": 0,
+                "B": 1,
                 "X": 2,
                 "Y": 3,
-                "B": 1,
-                "A": 0,
                 "LB": 4,
                 "RB": 5,
                 "SELECT": 6,
                 "START": 7,
+                "HOME": 8,
+                "LO": 9,
+                "RO": 10,
             }
 
         elif js_type == "switch":
@@ -266,8 +240,8 @@ class pndSdkBridge:
                 "RY": 3,  # Right stick axis y
                 "LT": 5,  # Left trigger
                 "RT": 4,  # Right trigger
-                "DX": 6,  # Directional pad x
-                "DY": 7,  # Directional pad y
+                "XX": 6,  # Directional pad x
+                "YY": 7,  # Directional pad y
             }
 
             self.button_id = {

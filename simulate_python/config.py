@@ -1,4 +1,4 @@
-ROBOT = "adam_sp" # Robot name, "adam_u", "adam_lite", "adam_sp" 
+ROBOT = "adam_u" # Robot name, "adam_u", "adam_lite", "adam_sp" 
 ROBOT_SCENE = "../pnd_robots/" + ROBOT + "/scene.xml" # Robot scene
 HANDPOSE_SRC = 1 # 0 is sim2sim 1 is real2sim
 # For ROS2
