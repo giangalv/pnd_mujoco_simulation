@@ -97,12 +97,6 @@ if __name__ == '__main__':
     hand_pub = ChannelPublisher("rt/handcmd", HandCmd_)
     hand_pub.Init()
     hand_cmd = adam_u_msg_dds__HandCmd_()
-    #for i in range(19):
-     #   cmd.motor_cmd[i].q = 0.0
-      #  cmd.motor_cmd[i].kp = 0.0
-       # cmd.motor_cmd[i].dq = 0.0
-        #cmd.motor_cmd[i].kd = 0.0
-        #cmd.motor_cmd[i].tau = 0.0
 
     while True:
         step_start = time.perf_counter()
