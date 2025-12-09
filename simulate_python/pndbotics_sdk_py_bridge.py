@@ -253,6 +253,9 @@ class pndSdkBridge:
                 "RB": 7,
                 "SELECT": 10,
                 "START": 11,
+                "HOME": 12,
+                "LO": 13,
+                "RO": 14,
             }
         else:
             print("Unsupported gamepad. ")
