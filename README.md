@@ -10,8 +10,8 @@
 [![CycloneDDS](https://img.shields.io/badge/CycloneDDS-latest-6D28D9)](https://cyclonedds.io/)
 [![ROS2](https://img.shields.io/badge/ROS2-Humble-22314E?logo=ros&logoColor=white)](https://docs.ros.org/en/humble/)
 
-![Updated At](https://img.shields.io/badge/Updated_At-November-64748B?style=flat-square)
-![Version](https://img.shields.io/badge/Version-1.0.3-2563EB?style=flat-square)
+![Updated At](https://img.shields.io/badge/Updated_At-December-64748B?style=flat-square)
+![Version](https://img.shields.io/badge/Version-1.0.4-2563EB?style=flat-square)
 [![License](https://img.shields.io/badge/License-BSD--3--Clause-059669?style=flat-square)](https://opensource.org/licenses/BSD-3-Clause)
 [![Issues](https://img.shields.io/badge/issues-open-EF4444?style=flat-square)](https://github.com/pndbotics/pnd_mujoco/issues)
 
@@ -274,6 +274,7 @@ Feel free to open issues or pull requests.
 
 | Version | Date       | Updates                                                                              |
 | ------- | ---------- | ------------------------------------------------------------------------------------ |
+| v1.0.4  | 2025-12-09 | Update xbox axis & Add lo ro home in switch|
 | v1.0.3  | 2025-11-20 | Get state in ros2 |
 | v1.0.2  | 2025-11-17 | Change the meshes and add Columns mass to 88 kg |
 | v1.0.1  | 2025-11-11 | Add ros2 example & Support hands |
