@@ -85,24 +85,18 @@ input("Press enter to start")
 if __name__ == '__main__':
 
     if len(sys.argv) <2:
-        ChannelFactoryInitialize(1, "lo")
+        ChannelFactoryInitialize(1)
     else:
         ChannelFactoryInitialize(1, sys.argv[1])
 
     # Create a publisher to publish the data defined in UserData class
     pub = ChannelPublisher("rt/lowcmd", LowCmd_)
     pub.Init()
-    cmd = adam_u_msg_dds__LowCmd_()
+    cmd = adam_u_msg_dds__LowCmd_(19)
 
     hand_pub = ChannelPublisher("rt/handcmd", HandCmd_)
     hand_pub.Init()
     hand_cmd = adam_u_msg_dds__HandCmd_()
-    #for i in range(19):
-     #   cmd.motor_cmd[i].q = 0.0
-      #  cmd.motor_cmd[i].kp = 0.0
-       # cmd.motor_cmd[i].dq = 0.0
-        #cmd.motor_cmd[i].kd = 0.0
-        #cmd.motor_cmd[i].tau = 0.0
 
     while True:
         step_start = time.perf_counter()
