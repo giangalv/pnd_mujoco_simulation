@@ -97,6 +97,8 @@ class DemonController(Node):
  
         self.runing_time += self.dt
         cmd = LowCmd()
+        cmd.motor_cmd = [MotorCmd() for _ in range(19)]
+        
         handcmd = HandCmd()
         if (self.runing_time < 3.0):
             # Stand up in first 3 second

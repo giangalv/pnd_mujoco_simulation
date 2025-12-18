@@ -36,7 +36,7 @@ class pndRos2Bridge:
         self.sub_hand_topic = Topic(self.participant, TOPIC_HAND_POSE, HandCmd_)
 
         
-        self.low_state = adam_u_msg_dds__LowState_()
+        self.low_state = adam_u_msg_dds__LowState_(19)
         self.low_state_puber = ChannelPublisher(TOPIC_LOWSTATE, LowState_)
         self.low_state_puber.Init()
         self.lowStateThread = RecurrentThread(
