@@ -1,5 +1,5 @@
-<mujoco model="adam_sp scene">
-    <include file="adam_sp.xml"/>
+<mujoco model="adam_pro scene">
+    <include file="adam_pro.xml"/>
 
     <statistic center="0 0 0.7" extent="1.2" meansize="0.04"/>
 
