@@ -1,4 +1,4 @@
-ROBOT = "adam_pro" # Robot name, "adam_u", "adam_lite", "adam_pro" 
+ROBOT = "adam_lite" # Robot name, "adam_u", "adam_lite", "adam_pro" 
 ROBOT_SCENE = "../pnd_robots/" + ROBOT + "/scene.xml" # Robot scene
 HANDPOSE_SRC = 1 # 0 is sim2sim 1 is real2sim
 # For ROS2
@@ -11,8 +11,8 @@ DOMAIN_ID = 1 # Domain id
 
 INTERFACE = "lo" # Interface 
 
-USE_JOYSTICK = 0 # Simulate PND WirelessController using a gamepad
-JOYSTICK_TYPE = "switch" # support "xbox" and "switch" gamepad layout
+USE_JOYSTICK = 1 # Simulate PND WirelessController using a gamepad
+JOYSTICK_TYPE = "xbox" # support "xbox" and "switch" gamepad layout
 JOYSTICK_DEVICE = 0 # Joystick number
 
 PRINT_SCENE_INFORMATION = False # Print link, joint and sensors information of robot
