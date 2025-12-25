@@ -1,6 +1,6 @@
 from typing import Any
 import traceback
-
+import pygame
 import mujoco
 import numpy as np
 
