@@ -47,7 +47,7 @@ class pndRos2Bridge:
             if name == "frame_pos":
                 self.have_frame_sensor_ = True
         # ROS2/CycloneDDS subscriber setup
-        self.participant = DomainParticipant(2)
+        self.participant = DomainParticipant(1)
         self.sub_topic = Topic(self.participant, TOPIC_LOWCMD, LowCmd_)
         self.sub_hand_topic = Topic(self.participant, TOPIC_HAND_POSE, HandCmd_)
 

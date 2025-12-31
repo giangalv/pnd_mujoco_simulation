@@ -141,7 +141,7 @@ class DemonController(Node):
             # print("received lowstate")
             
 def main(args=None):
-    os.environ["ROS_DOMAIN_ID"] = "2"
+    os.environ["ROS_DOMAIN_ID"] = "1"
     # os.environ["ROS_LOCALHOST"] = "127.0.0.1"
     rclpy.init(args=args)
     demon_controller = DemonController()
