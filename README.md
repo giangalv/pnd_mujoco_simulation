@@ -45,7 +45,7 @@
 
 ## 🆕 What's New
 
-### Latest Release — v1.0.3 (2025)
+### Latest Release — v1.2.0 (2026)
 
 #### 🚀 New Features
 - Python-based MuJoCo simulator using pnd_sdk_python
@@ -274,6 +274,7 @@ Feel free to open issues or pull requests.
 
 | Version | Date       | Updates                                                                              |
 | ------- | ---------- | ------------------------------------------------------------------------------------ |
+| v1.2.0  | 2026-01-22 | DDS refactoring version |
 | v1.0.4  | 2025-12-09 | Update xbox axis & Add lo ro home in switch|
 | v1.0.3  | 2025-11-20 | Get state in ros2 |
 | v1.0.2  | 2025-11-17 | Change the meshes and add Columns mass to 88 kg |
